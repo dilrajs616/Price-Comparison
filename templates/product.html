@@ -6,6 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    {{ product_data }}
+    <table>
+        <tr>
+            <th><b>Property</b></th>
+            <th><b>Value</b></th>
+        </tr>
+        {% for key, value in product.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
 </body>
 </html>
