@@ -1,14 +1,28 @@
 {% extends "layout.html" %}
+
 {% block body %}
-    <link rel="stylesheet" href="static\index.css">
+    <link rel="stylesheet" href="static/index.css">
+    
+    <header class="Header">
+        <h1>Welcome, User</h1>
+        <form action="/user/logout" method="post">
+            <button type="submit" class="logout-btn">Logout</button>
+        </form>
+    </header>
+
+    <div class="Search">
+        <form action="/product" method="post">
+            <h2 class="search-heading">Product Search</h2>
+            <input type="text" name="name" required autofocus autocomplete="off" placeholder="Enter product name">
+            <input type="submit" value="Search" class="search-btn">
+        </form>
+    </div>
+
+    <style>
+        .btn {
+        }
+    </style>
+
     <p class="btn">welcome {{ session.name }} </p>
-    <form action="/product" method="post">
-        <h2 style="color: #333;">Product Search</h2>
-        <input type="text" name="name" id="" required autofocus autocomplete="off" placeholder="Enter product name">
-        <br>
-        <input type="submit" value="Search">
-    </form>
-    <form action="/user/logout" method="post">
-        <button type="submit">Logout</button>
-    </form>
+
 {% endblock body %}
