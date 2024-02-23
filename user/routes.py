@@ -1,4 +1,4 @@
-from flask import redirect, jsonify
+from flask import redirect, render_template
 from app import app
 from user.models import User
 
@@ -8,7 +8,7 @@ def signup():
     if code == 200:
         return redirect("/dashboard")
     else:
-        return response
+        return render_template("/", error = response)
 
 @app.route("/user/login", methods=["POST"])
 def login():
@@ -16,7 +16,7 @@ def login():
     if code == 200:
         return redirect("/dashboard")
     else:
-        return response
+        return render_template("/", error = response)
 
 @app.route("/user/logout", methods=["POST"])
 def logout():
