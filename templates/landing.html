@@ -1,9 +1,46 @@
 {% extends "layout.html" %}
+{% block head %}
+
+<link rel="stylesheet" href="static/landing.css">
+
+{% endblock head %}
 {% block body %}
 
-<div class="card-wrapper">
+<h1>Price Comparision</h1>
 
+
+
+
+
+<button id="LoginBtn">Login</button>
+
+<div id="LoginModal" class="modal">
     <div class="card">
+
+        <span class="close">&times;</span>
+        <h1 class="center">Login</h1>
+
+        <form action="/user/login" method="post">
+
+            <label for="username">Username</label>
+            <input type="text" name="username" id="" autocomplete="off" required class="field">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="" autocomplete="off" required class="field">
+            <input type="submit" value="Login" class="btn">
+
+        </form>
+
+    </div>
+
+
+</div>
+
+
+<button id="SignupBtn">Signup</button>
+
+<div id="SignupModal" class="modal">
+    <div class="card">
+        <span class="close">&times;</span>
         <h1 class="center">Create an Account</h1>
         
         <form action="/user/signup" method="post">
@@ -20,25 +57,52 @@
 
     </div>
 
-</div>
-
-<div class="card-wrapper">
-
-    <div class="card">
-        <h1 class="center">Login</h1>
-        
-        <form action="/user/login" method="post">
-        
-            <label for="username">Username</label>
-            <input type="text" name="username" id="" autocomplete="off" required class="field">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="" autocomplete="off" required class="field">
-            <input type="submit" value="Login" class="btn">
-            
-        </form>
-
-    </div>
 
 </div>
+
+
+
+
+<script>// Get the modal
+    var LoginModal = document.getElementById("LoginModal");
+    var SignupModal = document.getElementById("SignupModal")
+
+
+    // Get the button that opens the modal
+    var LoginBtn = document.getElementById("LoginBtn");
+    var SignupBtn = document.getElementById("SignupBtn")
+
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close");
+
+    
+
+    // When the user clicks the button, open the modal 
+    LoginBtn.onclick = function () {
+        LoginModal.style.display = "block";
+    }
+    SignupBtn.onclick = function () {
+        SignupModal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span[0].onclick = function () {
+        LoginModal.style.display = "none";
+
+    }
+    span[1].onclick = function () {
+
+        SignupModal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if ((event.target == LoginModal) || (event.target == SignupModal) ) {
+            LoginModal.style.display = "none";
+            SignupModal.style.display = "none"
+        }
+    }</script>
+
 
 {% endblock body %}
