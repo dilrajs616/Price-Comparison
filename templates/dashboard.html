@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+    <link rel="stylesheet" href="static\index.css">
+    <p>welcome {{ session.user.name }} </p>
+    <form action="/product" method="post">
+        <h2 style="color: #333;">Product Search</h2>
+        <input type="text" name="name" id="" required autofocus autocomplete="off" placeholder="Enter product name">
+        <br>
+        <input type="submit" value="Search">
+    </form>
+    <form action="/user/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+{% endblock body %}

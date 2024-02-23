@@ -12,7 +12,7 @@ def product():
         product_data = Product_Info().amazon(product)
         
         if "products" in product_data["data"]:
-            return render_template("product.html", product = product_data["data"]["products"][1])
+            return render_template("product.html", product = product_data["data"]["products"])
         
         else:
             return "could not fetch data"

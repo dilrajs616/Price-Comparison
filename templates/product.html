@@ -11,10 +11,10 @@
             <th><b>Property</b></th>
             <th><b>Value</b></th>
         </tr>
-        {% for key, value in product.items() %}
+        {% for property in product %}
         <tr>
-            <td>{{ key }}</td>
-            <td>{{ value }}</td>
+            <td>{{ property }}</td>
+            <td>{{ product.property }}</td>
         </tr>
         {% endfor %}
     </table>
