@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopsmart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #232f3e;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .search-bar {
+            width: 60%;
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .sub-categories {
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            margin-bottom: 30px;
+        }
+
+        .sub-category {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sign-in-up {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+        }
+
+        .sign-in-up a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shopsmart</h1>
+    </header>
+
+    <div class="main-content">
+        <input type="text" class="search-bar" placeholder="Search for products">
+
+        <div class="sub-categories">
+            <div class="sub-category">Grocery</div>
+            <div class="sub-category">Mobile</div>
+            <div class="sub-category">Fashion</div>
+            <div class="sub-category">Electronics</div>
+            <div class="sub-category">Home&Furniture</div>
+            <div class="sub-category">Appliances</div>
+        </div>
+
+        <div class="sign-in-up">
+            <a href="#">Sign In</a>
+            <a href="#">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>
