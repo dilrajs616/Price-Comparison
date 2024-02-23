@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
     <link rel="stylesheet" href="static\index.css">
-    <p>welcome {{ session.user.name }} </p>
+    <p class="btn">welcome {{ session.name }} </p>
     <form action="/product" method="post">
         <h2 style="color: #333;">Product Search</h2>
         <input type="text" name="name" id="" required autofocus autocomplete="off" placeholder="Enter product name">

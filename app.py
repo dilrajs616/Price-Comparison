@@ -38,7 +38,7 @@ def landing():
 @app.route("/dashboard")
 @login_required
 def dashboard():
-    return render_template("dashboard.html", session = session)
+    return render_template("dashboard.html", session = session["user"])
 
 if __name__ == "__main__":
     app.run(debug=True)
