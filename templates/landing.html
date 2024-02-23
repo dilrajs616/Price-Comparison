@@ -9,10 +9,8 @@
 <h1>Price Comparision</h1>
 
 
-
-
-
 <button id="LoginBtn">Login</button>
+<button id="SignupBtn">Signup</button>
 
 <div id="LoginModal" class="modal">
     <div class="card">
@@ -36,15 +34,15 @@
 </div>
 
 
-<button id="SignupBtn">Signup</button>
+
 
 <div id="SignupModal" class="modal">
     <div class="card">
         <span class="close">&times;</span>
         <h1 class="center">Create an Account</h1>
-        
+
         <form action="/user/signup" method="post">
-        
+
             <label for="name">Name</label>
             <input type="text" name="name" id="" autofocus autocomplete="off" required class="field">
             <label for="username">Username</label>
@@ -52,13 +50,15 @@
             <label for="password">Password</label>
             <input type="password" name="password" id="" autocomplete="off" required class="field">
             <input type="submit" value="Signup" class="btn">
-            
+
         </form>
 
     </div>
 
 
 </div>
+
+
 
 
 
@@ -76,7 +76,7 @@
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close");
 
-    
+
 
     // When the user clicks the button, open the modal 
     LoginBtn.onclick = function () {
@@ -98,7 +98,7 @@
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-        if ((event.target == LoginModal) || (event.target == SignupModal) ) {
+        if ((event.target == LoginModal) || (event.target == SignupModal)) {
             LoginModal.style.display = "none";
             SignupModal.style.display = "none"
         }
