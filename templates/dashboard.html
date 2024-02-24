@@ -2,20 +2,6 @@
 
 {% block body %}
     <link rel="stylesheet" href="static/index.css">
-
-    {% with messages = get_flashed_messages() %}
-    
-        {% if messages %}
-
-            {% for msg in messages %}
-
-            <p>{{ msg }}</p>
-
-            {% endfor %}
-        
-        {% endif %}
-
-    {% endwith %}
     
     <header class="Header">
         <h1>Welcome, User</h1>

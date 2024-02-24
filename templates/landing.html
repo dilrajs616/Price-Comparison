@@ -6,20 +6,6 @@
 {% endblock head %}
 {% block body %}
 
-{% with messages = get_flashed_messages() %}
-    
-    {% if messages %}
-
-        {% for msg in messages %}
-
-        <p>{{ msg }}</p>
-
-        {% endfor %}
-
-    {% endif %}
-
-{% endwith %}
-
 <h1>Price Comparision</h1>
 
 <div class="error-wrraper" id="error-wrraper">
