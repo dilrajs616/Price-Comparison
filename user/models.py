@@ -1,4 +1,4 @@
-from flask import request, session, jsonify
+from flask import request, session
 from passlib.hash import pbkdf2_sha256
 import uuid
 from app import db
@@ -19,7 +19,7 @@ class User:
         password = request.form.get("password")
         
         if db.users.count_documents({"username":username}):
-            return jsonify({"error": "username already in use"}), 203
+            return {"error": "username already in use"}, 203
                 
         else:    
             user = {
@@ -37,7 +37,7 @@ class User:
                 return self.start_session(user)
             
             else:
-                return jsonify({"error": "could not signup"}), 201
+                return {"error": "could not signup"}, 201
     
     def login(self):
         username = request.form.get("username")
@@ -49,7 +49,7 @@ class User:
             return self.start_session(user)
         
         else:
-            return jsonify({"error":"credentials not found"}), 202
+            return {"error":"credentials not found"}, 202
     
     def logout(self):
         session.clear()
