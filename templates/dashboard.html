@@ -1,40 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="static\css\dashboard.css">
-</head>
-<body>
-    <nav>
-        <div class="logo">
-            <a href="#">SHOPSMART</a>
-        </div>
+{% extends "layout.html" %}
 
-        <h2>Welcome {{ session.name }}</h2>
+{% block head %}
 
-        <div class="search-bar">
-            <form action="/google/product" method="post">
-                <input type="text" name="name" autofocus placeholder="Search...">
-                <button type="submit">&#128269;</button>
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="static\css\landing.css"> -->
+
+{% endblock head %}
+
+
+{% block body %}
+
+
+<div class="h-[70vh] flex-col flex justify-center items-center">
+    <div class="text-5xl m-4 text-center">
+        <h2>Welcome, <span class=" font-bold">{{ session.name }}</span> to <span class="font-bold">SHOPSMART !!!
+            </span></h2>
+    </div>
+    <div class="text-center text-2xl">What would you like to search today ....</div>
+    
+    <div class="flex flex-wrap flex-row justify-center items-center">
+        <div class="">
+            <form class="" action="/google/product" method="post">
+                <input class=" w-[60vw]  h-12 border-2 border-black text-center rounded-full" type="text" name="name" autofocus placeholder="Search...">
+                <button class=" border-2 rounded-full border-black h-12 w-12" type="submit">&#128269;</button>
             </form>
         </div>
-        <div class="dropdown">
-            <a href="#">Categories</a>
-            <div class="dropdown-content">
-                <a href="#">Electronics</a>
-                <br>
-                <a href="#">Clothes & Wearable</a>
-                <br>
-                <a href="#">Phones & Tablets</a>
-            </div>
-        </div>
-        <a href="#">About</a>
-        <a href="#">Support</a>
-    </nav>
-    <form action="/user/logout" method="post">
-        <button type="submit">Logout</button>
-    </form>
-</body>
-</html>
+    </div>
+</div>
+
+{% endblock body %}
