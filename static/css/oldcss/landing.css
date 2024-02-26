@@ -10,6 +10,13 @@ body{
   z-index: 1;
 }
 
+.shopsmart{
+  position: absolute;
+  left: -49px;
+  top: -12px;
+  width: 150px;
+}
+
 .circle {
 width: 600px;
 height: 600px;
