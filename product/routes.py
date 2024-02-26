@@ -3,16 +3,12 @@ from product.models import Product_Info
 
 from app import app
 
-@app.route("/product", methods=["GET", "POST"])
+@app.route("/google/product", methods=["GET", "POST"])
 def product():
     if request.method == "GET":
         return redirect("/")
     else:
         product = request.form.get("name")
-        product_data = Product_Info().amazon(product)
+        product_data = Product_Info().google_product(product)
         
-        if "products" in product_data["data"]:
-            return render_template("product.html", product = product_data["data"]["products"])
-        
-        else:
-            return "could not fetch data"
+        return product_data

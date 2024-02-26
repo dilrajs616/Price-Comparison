@@ -1,18 +1,15 @@
-import requests
+from serpapi import GoogleSearch
 
 class Product_Info():
     
-    def amazon(self, product):
+    def google_product(self, product):
         
-        url = "https://real-time-amazon-data.p.rapidapi.com/search"
-
-        querystring = {"query":product,"page":"1","country":"IN","category_id":"aps"}
-
-        headers = {
-            "X-RapidAPI-Key": "caa3f795c4mshd4912cdde11ccd9p1b28d6jsnf00ee6983a6e",
-            "X-RapidAPI-Host": "real-time-amazon-data.p.rapidapi.com"
+        params = {
+            "engine": "google_shopping",
+            "q": product,
+            "api_key": "2c48521c2995601a65ae5562f47262ccc226a3a794e43d9ec325c75a3a401e4d"
         }
 
-        response = requests.get(url, headers=headers, params=querystring)
-
-        return response.json()
+        search = GoogleSearch(params)
+        results = search.get_dict()
+        return results["shopping_results"]
