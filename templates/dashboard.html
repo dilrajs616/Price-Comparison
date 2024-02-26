@@ -13,13 +13,6 @@
         </div>
 
         <h2>Welcome {{ session.name }}</h2>
-
-        <div class="search-bar">
-            <form action="/google/product" method="post">
-                <input type="text" name="name" autofocus placeholder="Search...">
-                <button type="submit">&#128269;</button>
-            </form>
-        </div>
         <div class="dropdown">
             <a href="#">Categories</a>
             <div class="dropdown-content">
@@ -31,10 +24,15 @@
             </div>
         </div>
         <a href="#">About</a>
-        <a href="#">Support</a>
-    </nav>
     <form action="/user/logout" method="post">
         <button type="submit">Logout</button>
     </form>
+</nav>
+<div class="search-bar">
+    <form action="/google/product" method="post">
+        <input type="text" name="name" autofocus placeholder="Search...">
+        <button type="submit">&#128269;</button>
+    </form>
+</div>
 </body>
 </html>
