@@ -3,6 +3,7 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from functools import wraps
 import os
+import time
 
 app = Flask(__name__)
 URI = os.getenv("MONGO_URI")
@@ -35,10 +36,15 @@ def landing():
     else:
         return redirect("/dashboard")
 
+@app.route("/authentication")
+def authentication():
+    return render_template("authentication.html")
+
 @app.route("/dashboard")
 @login_required
 def dashboard():
     return render_template("dashboard.html", session = session["user"])
+
 
 if __name__ == "__main__":
     app.run(debug=True)

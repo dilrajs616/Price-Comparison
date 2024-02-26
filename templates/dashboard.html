@@ -1,27 +1,37 @@
-{% extends "layout.html" %}
-
-{% block body %}
-    <link rel="stylesheet" href="static/dashbord.css">
-    
-    <header class="Header">
-        <h1>Welcome, User</h1>
-        <form action="/user/logout" method="post">
-            <button type="submit" class="logout-btn">Logout</button>
-        </form>
-    </header>
-
-    <div class="Search">
-        <form action="/product" method="post">
-            <h2 class="search-heading">Product Search</h2>
-            <input type="text" name="name" required autofocus autocomplete="off" placeholder="Enter product name">
-            <input type="submit" value="Search" class="search-btn">
-        </form>
-    </div>
-
-    <style>
-    
-    </style>
-
-    <p class="btn">welcome {{ session.name }} </p>
-
-{% endblock body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static\css\dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#">SHOPSMART</a>
+        </div>
+        <div class="search-bar">
+            <form action="/product" method="post">
+                <input type="text" name="name" autofocus placeholder="Search...">
+                <button type="submit">&#128269;</button>
+            </form>
+        </div>
+        <div class="dropdown">
+            <a href="#">Categories</a>
+            <div class="dropdown-content">
+                <a href="#">Electronics</a>
+                <br>
+                <a href="#">Clothes & Wearable</a>
+                <br>
+                <a href="#">Phones & Tablets</a>
+            </div>
+        </div>
+        <a href="#">About</a>
+        <a href="#">Support</a>
+    </nav>
+    <form action="/user/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>

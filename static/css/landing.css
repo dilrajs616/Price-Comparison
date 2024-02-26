@@ -1,0 +1,76 @@
+body{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.iphone{
+  position: fixed;
+  width: 700px;
+  margin-left: 830px;
+  margin-top: -1000px;
+  z-index: 1;
+}
+
+.circle {
+width: 600px;
+height: 600px;
+opacity: 30%;
+position: relative;
+top: -20px;
+margin-left: 850px;
+background-color: #09bdc0;
+border-radius: 50%; /* This makes it a circle */ 
+}
+@keyframes jump {
+0% {
+transform: translateY(0);
+}
+100% {
+transform: translateY(-20px); /* Adjust this value to control the jump height */
+}
+}
+.circle1{
+position: relative;
+border-radius: 50%;
+height: 50px;
+width: 50px;
+top: -698px;
+opacity: 30%;
+z-index: -1;
+background-color:#09bdc0 ;
+}
+#logo1{
+padding: 20px;
+font-size: 20px;
+font-weight: 900;
+}
+#logo2{
+position: relative;
+
+font-size: 20px;
+font-weight: bolder;
+top: -52px;
+right: -76px;
+}
+h1{
+position: relative;
+top: -580px;
+font-size: 100px;
+}
+button{
+position: relative;
+border: none;
+height: 100px;
+width: 290px;
+padding: 20px;
+border-radius: 50px;
+top: -550px;
+opacity: 90%;
+color: black;
+font-weight: 900;
+font-size: 30px;
+background-color:#09bdc0 ;
+animation: jump 1s infinite alternate; /* Animation definition */
+}
+button:hover{
+background-color: #7deff0;
+}

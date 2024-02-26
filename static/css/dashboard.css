@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,400i,600");
+
+        body {
+            font-family: Poppins;
+            background-image: url("https://images.unsplash.com/photo-1516124540143-26bf0c56ea23?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg1MzI3Mzd8&ixlib=rb-4.0.3&q=85");
+            background-size: 100vw;
+            background-color: white;
+            margin: 0px;
+            padding: none;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            background-color: rgba(200, 210, 220, 0.2);
+            padding: 0px;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+            backdrop-filter: blur(2px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 1px 10px 10px rgba(0, 20, 50, 0.1);
+            min-height: 50px;
+            width: 100vw;
+        }
+
+        .logo, .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            font-weight: 900;
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+        }
+
+        .search-icon button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        nav a {
+            transition: border 0.2s ease;
+            text-decoration: none;
+            color: white;
+            padding: 1px;
+            padding-bottom: 3px;
+            padding-top: 3px;
+            margin-left: 5px;
+            border: 1px solid rgba(255, 255, 255, 0);
+            border-radius: 999px;
+        }
+
+        nav a:hover {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 999px;
+            backdrop-filter: blur(8px);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(200, 210, 220, 0.2);
+            min-width: 100px;
+            box-shadow: 1px 10px 10px rgba(0, 20, 50, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        h1 {
+            margin: 50px;
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        button {
+            transition: backdrop-filter 0.3s ease;
+            font-family: poppins;
+            margin-left: 50px;
+            border: none;
+            border-radius: 9999px;
+            padding: 10px 32px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: rgba(200, 210, 220, 0.2);
+            backdrop-filter: blur(2px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        button:hover {
+            backdrop-filter: blur(8px);
+        }
+
+        p {
+            margin: 50px;
+            margin-top: -50px;
+            margin-bottom: 30px;
+        }
