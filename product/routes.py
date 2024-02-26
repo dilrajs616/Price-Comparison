@@ -9,6 +9,6 @@ def product():
         return redirect("/")
     else:
         product = request.form.get("name")
-        product_data = Product_Info().google_product(product)
+        product_data = Product_Info().google_shopping(product)
         
         return product_data

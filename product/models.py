@@ -2,7 +2,7 @@ from serpapi import GoogleSearch
 
 class Product_Info():
     
-    def google_shpping(self, product):
+    def google_shopping(self, product):
         
         params = {
             "engine": "google_shopping",
