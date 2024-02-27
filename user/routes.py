@@ -10,7 +10,7 @@ def signup():
         return redirect("/dashboard")
 
     flash(response["error"], "error")
-    return redirect("/")
+    return redirect("/authentication")
 
 @app.route("/user/login", methods=["POST"])
 def login():
@@ -20,7 +20,7 @@ def login():
         return redirect("/dashboard")
 
     flash(response["error"], "error")
-    return redirect("/")
+    return redirect("/authentication")
 
 @app.route("/user/logout", methods=["POST"])
 def logout():
