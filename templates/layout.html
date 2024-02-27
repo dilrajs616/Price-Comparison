@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="static/css/layout.css"> -->
-    <link rel="stylesheet" href="static/css/output.css">
-    <link rel="stylesheet" href="static/css/error.css">
+    <link rel="stylesheet" href="../static/css/output.css">
+    <link rel="stylesheet" href="../static/css/error.css">
 
     <title>Minor Project</title>
     {% block head %}{% endblock head %}
@@ -53,9 +53,7 @@
 
             <!-- login signup button -->
             <div class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
-            {% if session.name %} 
-
-                
+            {% if session.name %}                 
 
                     <form action="/user/logout" method="post">
                         <button class=" bg-blue text-white hover:bg focus:ring-4 focus:ring-blue font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:bg-blue dark:hover:bg-blue focus:outline-none dark:focus:ring-blue" type="submit">Logout</button>

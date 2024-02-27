@@ -9,6 +9,7 @@ def product():
         return redirect("/")
     else:
         product = request.form.get("name")
-        product_data = Product_Info().google_shopping(product)
+        product_data, res = Product_Info().google_shopping(product)
+        print(product_data)
         
         return render_template ("product.html", product=product_data )
