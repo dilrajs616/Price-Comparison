@@ -1,8 +1,12 @@
+from flask import session
 from serpapi import GoogleSearch
+from app import db
 
 class Product_Info():
     
     def google_shopping(self, product):
+        
+        print(session)
         
         params = {
             "engine": "google_shopping",
@@ -16,6 +20,10 @@ class Product_Info():
             "safe": "active",
             "api_key": "3461034bcd278c80c11bb39008c5690bad72a78b9fc1fc80c6b39a5c7870928f"
         }
+
+        id = session["user"]["_id"]
+        
+        db.users.update_one({"_id":id} ,{"$push": {"history": product}})
 
         search = GoogleSearch(params)
         results = search.get_dict()
