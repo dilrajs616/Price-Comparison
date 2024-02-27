@@ -11,4 +11,4 @@ def product():
         product = request.form.get("name")
         product_data = Product_Info().google_shopping(product)
         
-        return product_data
+        return render_template ("product.html", product=product_data )
