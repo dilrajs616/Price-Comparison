@@ -13,25 +13,26 @@
 
 <div>
     <h1>inline_shopping_results</h1>
+    <div class="flex flex-wrap flex-row inline-block justify-center items-center  ">
+        {% for prod in product.shopping_results %}
+        <a href={{prod.link}} class="">
+            <div class=" border-2 border-slate-700 inline-block w-64 m-2 p-2 h-[500px]">
+                <img src={{prod.thumbnail}} class="" alt="">
+                <h1>{{prod.title}}</h1>
+                <h1>Platform: {{prod.source}}</h1>
+                <h1>Price: {{prod.price}}</h1>
+                <h1>Rating: {{prod.rating}}</h1>
+                <h1>Review: {{prod.reviews}}</h1>
+                <h1>{{prod.delivery}}</h1>
+                
+            </div>
+        </a>
 
-    {% for prod in product.shopping_results %}
-    <div>
-        <h1>{{prod.title}}</h1>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <hr>
-     
+        {% endfor %}
     </div>
-
-    {% endfor %}
 
 </div>
 
 
 
 {% endblock body %}
-
-
