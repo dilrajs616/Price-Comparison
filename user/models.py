@@ -6,14 +6,13 @@ from app import db
 class User:
 
     def start_session(self, user):
-        
         del user["password"]
         session["logged_in"] = True
         session["user"] = user
         return session, 200
     
     def signup(self):
-        
+
         name = request.form.get("name")
         username = request.form.get("username")
         password = request.form.get("password")
