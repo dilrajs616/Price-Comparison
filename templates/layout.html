@@ -22,7 +22,7 @@
 
 
             <!-- hero img  -->
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="//www.w3.org/2000/svg" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="{{url_for('static', filename='./img/shopsmart.png')}}" class="h-16" alt="Hero Logo" />
             </a>
             <!-- hero img  -->
@@ -63,34 +63,34 @@
 
 
             <!-- menu list  -->
-            <div id="mega-menu-icons" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-                <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+            <div id="mega-menu-icons" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" style="display:flex;">
+                <form action="/google/product" method="post" style="margin-left:20px">
 
+                    <input type="hidden" name="name" value="Electronics">
+                    <input type=submit
+                        class="block py-2 px-3 text-blue border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue md:p-0 md:dark:hover:text-blue dark:hover:bg-gray-700 dark:hover:text-blue md:dark:hover:bg-transparent dark:border-gray-700" value="Electronics"></input>
+                </form>
+        
+                <form action="/google/product" method="post" style="margin-left:20px">
+                    <input type="hidden" name="name" value="Clothes and Wearable">
+                    <input type=submit
+                        class="block py-2 px-3 text-blue border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue md:p-0 md:dark:hover:text-blue dark:hover:bg-gray-700 dark:hover:text-blue md:dark:hover:bg-transparent dark:border-gray-700" value="Clothes & Wearable">
+                    </input>
+                </form>
 
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-blue border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue md:p-0 md:dark:hover:text-blue dark:hover:bg-gray-700 dark:hover:text-blue md:dark:hover:bg-transparent dark:border-gray-700">Electronics</a>
-                    </li>
+                <form action="/google/product" method="post" style="margin-left:20px">
+                    <input type="hidden" name="name" value="Phones & Tablets">
+                    <input type=submit
+                        class="block py-2 px-3 text-blue border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue md:p-0  md:dark:hover:text-blue dark:hover:bg-gray-700 dark:hover:text-blue md:dark:hover:bg-transparent dark:border-gray-700" value="Phones & Tablets">
+                    </input>
+                </form>
 
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-blue border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue md:p-0 md:dark:hover:text-blue dark:hover:bg-gray-700 dark:hover:text-blue md:dark:hover:bg-transparent dark:border-gray-700">Clothes & Wearable
-                            </a>
-                    </li>
-
-
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-blue border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue md:p-0  md:dark:hover:text-blue dark:hover:bg-gray-700 dark:hover:text-blue md:dark:hover:bg-transparent dark:border-gray-700">Phones & Tablets
-                            </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-blue border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue md:p-0  md:dark:hover:text-blue dark:hover:bg-gray-700 dark:hover:text-blue md:dark:hover:bg-transparent dark:border-gray-700">About Us
-                            </a>
-                    </li>
-
-                </ul>
+                <form action="/google/product" method="post" style="margin-left:20px">
+                    <input type="hidden" name="name" value="Households">
+                    <input type=submit
+                        class="block py-2 px-3 text-blue border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue md:p-0  md:dark:hover:text-blue dark:hover:bg-gray-700 dark:hover:text-blue md:dark:hover:bg-transparent dark:border-gray-700" value="Households">
+                    </input>
+                </form>
             </div>
             <!-- menu list  -->
 

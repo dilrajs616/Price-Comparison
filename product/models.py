@@ -6,7 +6,6 @@ class Product_Info():
     
     def google_shopping(self, product):
         
-        print(session)
         
         params = {
             "engine": "google_shopping",
