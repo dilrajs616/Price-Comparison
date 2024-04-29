@@ -1,6 +1,5 @@
 from flask import Flask, render_template, session, redirect
 from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
 from functools import wraps
 import os
 import time
@@ -12,7 +11,7 @@ app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 app.config['MONGO_URI'] = URI
 
 # Create a new client and connect to the server
-client = MongoClient(URI, server_api=ServerApi('1'))
+client = MongoClient(URI)
 db = client.UserData
 
 from product import routes
